@@ -23,11 +23,28 @@
                 <h2>Связаться со мной</h2>
                 <ul class="contacts-list">
                     <li><strong>📞 Телефон:</strong> +7 (XXX) XXX-XX-XX</li>
-                    <li><strong>✉️ Email:</strong> Zoketurbo@mmail.com</li>
-                    <li><strong>💼 Telegram:</strong> @wiazutluv</li>
-                    <li><strong>🐙 GitHub:</strong> github.com/zoketurbo54</li>
+                    <li><strong>✉️ Email:</strong> safronov.alexander@example.com</li>
+                    <li><strong>💼 Telegram:</strong> @safronov_alex</li>
+                    <li><strong>🐙 GitHub:</strong> github.com/safronov-alex</li>
                     <li><strong>📍 Город:</strong> Пенза</li>
                 </ul>
+            </div>
+
+            <div class="info-card">
+                <h2>Написать сообщение</h2>
+                <form class="contact-form">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                    
+                    <label for="email">Ваш Email:</label>
+                    <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
+                    
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Напишите ваше сообщение здесь..." required></textarea>
+                    
+                    <button type="submit">Отправить</button>
+                    <p class="form-note">*Данные никуда не отправляются, а выводятся в консоль браузера.</p>
+                </form>
             </div>
         </div>
     </main>
@@ -35,5 +52,140 @@
     <footer>
         <p>&copy; 2026 Сафронов Александр Дмитриевич</p>
     </footer>
+
+    <script>
+        // Обработчик формы на JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.querySelector('.contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    const nameInput = document.getElementById('name');
+                    const emailInput = document.getElementById('email');
+                    const messageTextarea = document.getElementById('message');
+                    
+                    const userName = nameInput.value.trim();
+                    const userEmail = emailInput.value.trim();
+                    const userMessage = messageTextarea.value.trim();
+                    
+                    if (userName === '' || userEmail === '' || userMessage === '') {
+                        alert('❌ Пожалуйста, заполните все поля формы!');
+                        return;
+                    }
+                    
+                    if (!userEmail.includes('@') || !userEmail.includes('.')) {
+                        alert('❌ Пожалуйста, введите корректный email (пример: name@mail.ru)');
+                        return;
+                    }
+                    
+                    console.log('📨 Новое сообщение от пользователя:');
+                    console.log('Имя:', userName);
+                    console.log('Email:', userEmail);
+                    console.log('Сообщение:', userMessage);
+                    
+                    alert(`✅ Спасибо, ${userName}! Ваше сообщение отправлено.\n\nЯ свяжусь с вами в ближайшее время.`);
+                    
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Александр Сафронов | Контакты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <a href="index.html">Главная</a>
+            <a href="about.html">Обо мне</a>
+            <a href="contacts.html" class="active">Контакты</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Контакты</h1>
+        
+        <div class="contacts-wrapper">
+            <div class="info-card">
+                <h2>Связаться со мной</h2>
+                <ul class="contacts-list">
+                    <li><strong>📞 Телефон:</strong> +7 (XXX) XXX-XX-XX</li>
+                    <li><strong>✉️ Email:</strong> safronov.alexander@example.com</li>
+                    <li><strong>💼 Telegram:</strong> @safronov_alex</li>
+                    <li><strong>🐙 GitHub:</strong> github.com/safronov-alex</li>
+                    <li><strong>📍 Город:</strong> Пенза</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2>Написать сообщение</h2>
+                <form class="contact-form">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                    
+                    <label for="email">Ваш Email:</label>
+                    <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
+                    
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Напишите ваше сообщение здесь..." required></textarea>
+                    
+                    <button type="submit">Отправить</button>
+                    <p class="form-note">*Данные никуда не отправляются, а выводятся в консоль браузера.</p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Сафронов Александр Дмитриевич</p>
+    </footer>
+
+    <script>
+        // Обработчик формы на JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.querySelector('.contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    const nameInput = document.getElementById('name');
+                    const emailInput = document.getElementById('email');
+                    const messageTextarea = document.getElementById('message');
+                    
+                    const userName = nameInput.value.trim();
+                    const userEmail = emailInput.value.trim();
+                    const userMessage = messageTextarea.value.trim();
+                    
+                    if (userName === '' || userEmail === '' || userMessage === '') {
+                        alert('❌ Пожалуйста, заполните все поля формы!');
+                        return;
+                    }
+                    
+                    if (!userEmail.includes('@') || !userEmail.includes('.')) {
+                        alert('❌ Пожалуйста, введите корректный email (пример: name@mail.ru)');
+                        return;
+                    }
+                    
+                    console.log('📨 Новое сообщение от пользователя:');
+                    console.log('Имя:', userName);
+                    console.log('Email:', userEmail);
+                    console.log('Сообщение:', userMessage);
+                    
+                    alert(`✅ Спасибо, ${userName}! Ваше сообщение отправлено.\n\nЯ свяжусь с вами в ближайшее время.`);
+                    
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
